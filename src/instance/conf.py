@@ -3,7 +3,7 @@ TAGS = [ { "text": "e4c7751d5230", "value": "e4c7751d5230"} ]
 # What columns to include
 DATA_COLUMNS = ['time','temperature','humidity']
 # SQLite DB file
-DATABASE = "../../ruuvitag.db"
+DATABASE = "/home/pi/ruuvitag.db"
 # delay to fetch ruuvitag data
 DATA_FETCH_DELAY = 300
 # Log file path
