@@ -19,7 +19,7 @@ Most importantly make sure that you set correct MAC addresses of your Ruuvi tag(
 
 Configuration properties:
 
-* `TAGS` specifies your ruuvi tags. Set your tag's MAC address as a value in both "text" and "value" fields. Use lowercase without colon like in the below example. You can multiple dicts if you have multiple tags.
+* `TAGS` specifies your ruuvi tags. Set your tag's MAC address as a value in both "text" and "value" fields. Use lowercase without colon like in the below example. You can add multiple dicts if you have multiple tags.
 
 ```
 TAGS = [ { "text": "e4c7751d5230", "value": "e4c7751d5230"} ]
@@ -63,7 +63,7 @@ gunicorn --bind 127.0.0.1:8080 wsgi:app
 
 * `GET /` should return "OK" and 200 status code. (`curl http://127.0.0.1:8080/`)
 * `POST /search` should return list of your tags in the same format that was specified in settings. (`curl -X POST http://127.0.0.1:8080/search`)
-* `POST /query` returns sensor data in format that can be visualized in Grafana. An example to test this is below. This,however, doesn't include all the query parameters that Grafana includes. Change MAC address to match your tag(s) and suitable from/to values to test the example
+* `POST /query` returns sensor data in format that can be visualized in Grafana. An example to test this is below. This,however, doesn't include all the query parameters that Grafana includes. Change MAC address to match one of your tags and suitable from/to values to test the example.
 
 ```
 curl -H "Content-Type: application/json" -X POST http://127.0.0.1:8080/query -d '{"range": {"from": "2020-12-22T06:13:41.884Z","to": "2020-12-22T12:13:41.885Z"},"targets": [{"target": "e4c7751d5230", "type": "table"}]}'
