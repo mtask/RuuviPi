@@ -78,3 +78,5 @@ curl -H "Content-Type: application/json" -X POST http://127.0.0.1:8080/query -d 
 
 Install Grafana and [JSON plugin](https://grafana.com/grafana/plugins/simpod-json-datasource). Configure RuuviPi's URL as a new JSON data source and 
 specify it as a data source for a panel with table format.
+  
+![](img/grafanaDboard.png)
