@@ -1,4 +1,5 @@
 RuuviPi is a Flask based python application that provides JSON datasource to visualize data from [Ruuvi tags](https://ruuvi.com/) in [Grafana](https://grafana.com/).
+It's designed to work with [JSON plugin](https://grafana.com/grafana/plugins/simpod-json-datasource) for Grafana.
 
 # Deployment
 
