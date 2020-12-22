@@ -1,5 +1,10 @@
 RuuviPi is a Flask based python application that provides JSON datasource to visualize data from [Ruuvi tags](https://ruuvi.com/) in [Grafana](https://grafana.com/).
-It's designed to work with [JSON plugin](https://grafana.com/grafana/plugins/simpod-json-datasource) for Grafana.
+It's designed to work with [JSON plugin](https://grafana.com/grafana/plugins/simpod-json-datasource) for Grafan. 
+
+The RuuviPi API polls Ruuvi tags using [this library](https://github.com/ttu/ruuvitag-sensor) and stores the returned data in SQLite database. 
+The poll interval can be specified in the app's configuration, and the polling is done in a seperate thread. The JSON plugin can then poll the API and it returns data for the requested timespan.
+
+![](img/arch.png)
 
 # Deployment
 
